@@ -11,7 +11,7 @@
 build/
 DerivedData/
 AppCenter-SDK-Apple/
-Documentation/**/Generated
+Documentation/Generated
 
 ## Various settings
 *.pbxuser
@@ -67,9 +67,8 @@ fastlane/screenshots
 
 iOSInjectionProject/
 
-# Mac
-#
-.DS_Store
+# iOS
+# DS_Store
 
-Localization/*.zip
+Localization/.zip
 Localization/Unzip/
