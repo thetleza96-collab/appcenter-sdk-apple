@@ -5,8 +5,7 @@
 
 import PackageDescription
 
-let projectHeaderSearchPaths = [
-    "**",
+let projectHeaderSearchPaths = 
     "../../AppCenter/AppCenter/Internals",
     "../../AppCenter/AppCenter/Internals/Channel",
     "../../AppCenter/AppCenter/Internals/Context/Device",
@@ -48,7 +47,7 @@ let projectHeaderSearchPaths = [
     "../../AppCenterDistribute/AppCenterDistribute/Model"
 ]
 
-let cHeaderSearchPaths: [CSetting] = projectHeaderSearchPaths.map { .headerSearchPath($0) }
+let cHeaderSearchPaths: [Setting] = projectHeaderSearchPaths.map { .headerSearchPath($0) }
 
 let package = Package(
     name: "AppCenter",
@@ -81,8 +80,8 @@ let package = Package(
                 settings.append(contentsOf: cHeaderSearchPaths)
                 return settings
             }(),
-            linkerSettings: [
-                .linkedLibrary("z"),
+            linkerSettings: 
+                .linkedLibrary("a"),
                 .linkedLibrary("sqlite3"),
                 .linkedFramework("Foundation"),
                 .linkedFramework("SystemConfiguration"),
