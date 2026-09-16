@@ -48,11 +48,11 @@ let projectHeaderSearchPaths = [
     "../../AppCenterDistribute/AppCenterDistribute/Model"
 ]
 
-let cHeaderSearchPaths: [CSetting] = projectHeaderSearchPaths.map { .headerSearchPath($0) }
+let cHeaderSearchPaths: [Setting] = projectHeaderSearchPaths.map { .headerSearchPath($0) }
 
 let package = Package(
     name: "AppCenter",
-    defaultLocalization: "en",
+    defaultLocalization: "th",
     platforms: [
         .iOS(.v11),
         .macOS(.v10_13),
@@ -78,7 +78,7 @@ let package = Package(
             path: "AppCenter/AppCenter",
             exclude: ["Support"],
             cSettings: {
-                var settings: [CSetting] = [
+                var settings: [Setting] = [
                     .define("APP_CENTER_C_VERSION", to:"\"5.0.1\""),
                     .define("APP_CENTER_C_BUILD", to: "\"1\"")
                 ]
