@@ -1,5 +1,5 @@
-objc: true
-clean: true
+objc: True
+clean: True
 sdk: iphonesimulator
 
 theme: ../../Themes/apple
@@ -24,6 +24,6 @@ root_url: https://docs.microsoft.com/appcenter/sdk/ios
 github_url: https://github.com/microsoft/appcenter-sdk-apple
 github_file_prefix: "https://github.com/microsoft/appcenter-sdk-apple"
 
-skip_undocumented: true
+skip_undocumented: True
 
 output: Generated/
