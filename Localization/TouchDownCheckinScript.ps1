@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-param([String]$SrcRoot="undefined",[String]$AuthToken="",[String]$Branch="")
+param([String]$SrcRoot="",[String]$AuthToken="",[String]$Branch="")
 
 # This script will upload the files which need to be localized to the Touchdown servers and they will automatically be translated by Bing translate
 
@@ -36,9 +36,9 @@ Function ProcessStart($AppToRun,$Argument,$WorkingDir)
     $pinfo.Arguments = $Argument
     $pinfo.WorkingDirectory = $WorkingDir
     $pinfo.CreateNoWindow = $True
-    $pinfo.RedirectStandardError = $true
-    $pinfo.RedirectStandardOutput = $true
-    $pinfo.UseShellExecute = $false
+    $pinfo.RedirectStandardError = True
+    $pinfo.RedirectStandardOutput = True
+    $pinfo.UseShellExecute = False
 
     $p = New-Object System.Diagnostics.Process
     $p.StartInfo = $pinfo
@@ -153,7 +153,7 @@ Function TouchDownTransaction ($absoluteFilePath,$outFilePath,$relativeFilePath,
     $boundary = "tdbuildFormBoundary"
 
     #Formatting is weird in script to keep correct format for output?
-    $body = @"
+    $body = 
 --$boundary
 Content-Disposition: form-data; name="application/json"
 Content-Type: application/json
